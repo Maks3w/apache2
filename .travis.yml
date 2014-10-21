@@ -12,6 +12,8 @@ rvm:
   - 2.1.1
 
 bundler_args: --without integration development --jobs 7
+before_install:
+  - bundle config build.nokogiri --use-system-libraries
 before_script:
   - bundle exec berks
 script:
